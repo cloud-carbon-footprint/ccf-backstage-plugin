@@ -3,4 +3,4 @@
 "plugin-cloud-carbon-footprint-frontend": patch
 ---
 
-Initial versioning for frontend and backend packages
+Initial versioning for the frontend and backend packages
