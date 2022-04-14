@@ -124,7 +124,9 @@ jobs:
       #   run: yarn tsc:full
       - name: build packages
         # uses the react-scripts build and tsc build for client
-        run: yarn run build
+        run: |
+          yarn tsc:full
+          yarn build
       # Publishes current version of packages that are not already present in the registry
       - name: publish
         if: github.event.pull_request.head.ref == 'changeset-release/trunk'
