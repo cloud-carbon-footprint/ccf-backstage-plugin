@@ -1,1 +1,0 @@
-# ccf-backstage-plugin

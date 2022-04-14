@@ -1,0 +1,37 @@
+app:
+  title: CCF Backstage App
+  baseUrl: http://localhost:3000
+backend:
+  baseUrl: http://localhost:4000
+  listen:
+    port: 4000
+  csp:
+    connect-src: ["'self'", "http:", "https:"]
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, POST, PUT, DELETE]
+    credentials: true
+  cache:
+    store: memory
+  auth:
+    keys:
+      - secret: foo
+cloudCarbonFootprint:
+  gcp:
+    useBillingData: true
+    billingProjectId: my-project
+    billingProjectName: My Project
+    bigQueryTable: billing_export_dataset.gcp_billing_export_v1_01B22A_05AA4C_87BDAC
+  aws:
+    useBillingData: true
+    athenaDbName: athena-db
+    athenaDbTable: billing export table
+    athenaRegion: us-east-1
+    athenaQueryResultLocation: s3://bucket
+    billingAccountId: cool-account
+    billingAccountName: Cool account, low emissions
+  azure:
+    useBillingData: true,
+    clientId: client id,
+    clientSecret: shhh,
+    tenantId: tenant id,

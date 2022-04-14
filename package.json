@@ -1,0 +1,37 @@
+{
+  "name": "ccf-backstage-plugin",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lerna run build",
+    "tsc": "tsc",
+    "tsc:full": "backstage-cli clean && tsc --skipLibCheck false --incremental false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloud-carbon-footprint/ccf-backstage-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloud-carbon-footprint/ccf-backstage-plugin/issues"
+  },
+  "workspaces": {
+    "packages": [
+      "plugins/*"
+    ]
+  },
+  "homepage": "https://github.com/cloud-carbon-footprint/ccf-backstage-plugin#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.26",
+    "@types/webpack": "^5.28.0",
+    "lerna": "^4.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "~4.5.4"
+  },
+  "dependencies": {
+    "@backstage/cli": "^0.17.0-next.1"
+  }
+}
