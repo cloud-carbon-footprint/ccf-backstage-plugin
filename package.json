@@ -7,6 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "lerna run build",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
     "tsc": "tsc",
     "tsc:full": "backstage-cli clean && tsc --skipLibCheck false --incremental false"
   },
