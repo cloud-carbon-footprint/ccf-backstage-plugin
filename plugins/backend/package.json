@@ -1,5 +1,5 @@
 {
-  "name": "@cloud-carbon-footprint/backstage-plugin-backend",
+  "name": "@austin-garrard/backstage-plugin-backend",
   "version": "0.0.1",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -27,8 +27,7 @@
     "clean": "backstage-cli clean"
   },
   "dependencies": {
-    "@backstage/backend-common": "^0.13.2-next.1",
-    "@backstage/config": "^1.0.0",
+    "@backstage/backend-common": "^0.13.1",
     "@cloud-carbon-footprint/api": "^1.4.1",
     "@cloud-carbon-footprint/common": "^1.5.1",
     "@types/express": "*",
@@ -39,7 +38,6 @@
     "yn": "^4.0.0"
   },
   "devDependencies": {
-    "@backstage/cli": "^0.17.0-next.1",
     "@types/supertest": "^2.0.8",
     "msw": "^0.35.0",
     "supertest": "^4.0.2"
