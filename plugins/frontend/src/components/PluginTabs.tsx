@@ -38,13 +38,10 @@ const determineDates = (clientConfig?: Config) => {
   const endDate: moment.Moment = moment.utc();
   const defaultStartDate: moment.Moment = moment.utc().subtract(1, 'months');
 
-  const previousYearOfUsage = clientConfig?.getOptionalBoolean(
-    'previousYearOfUsage',
-  );
   const dateRangeValue = clientConfig?.getOptionalNumber('dateRangeValue');
   const dateRangeType = clientConfig?.getOptionalString('dateRangeType');
 
-  const configuredStartDate =
+  const startDate: moment.Moment =
     dateRangeType && dateRangeValue
       ? moment
           .utc()
@@ -53,8 +50,6 @@ const determineDates = (clientConfig?: Config) => {
             dateRangeType as moment.unitOfTime.DurationConstructor,
           )
       : defaultStartDate;
-  const startDate: moment.Moment =
-    previousYearOfUsage === true ? defaultStartDate : configuredStartDate;
   return { endDate, startDate };
 };
 
