@@ -46,16 +46,16 @@ const routes = (
 )
 ```
 
-Pin webpack version in root `package.json`:
-```json
-{
-  "resolutions": {
-    "webpack": "5.70.0"
-  }
-}
+Optionally, add config to `app-config.local.yaml`. See the [client config schema](./plugins/frontend/config.d.ts) for more details. Note that long date ranges and/or granular groupings can result in long load times. The default values are:
+```yaml
+cloudCarbonFootprint:
+  client:
+    dateRangeType: months
+    dateRangeValue: 1
+    groupBy: week
 ```
 
-Then access the plugin at `localhost:3000/cloud-carbon-footprint`. To see data populated in the UI, you must set up the backend plugin.
+Then, run `yarn dev` and access the plugin at `localhost:3000/cloud-carbon-footprint`. To see data populated in the UI, you must set up the backend plugin.
 
 ### Backend plugin
 
@@ -101,7 +101,7 @@ async funtion main() {
 }
 ```
 
-Create a file `app-config.local.yaml` with configuration for your cloud providers. See the [backend README](./plugins/backend/README.md) for more details.
+Add configuration for your cloud providers to `app-config.local.yaml`. See the [backend README](./plugins/backend/README.md) for more details.
 ```yaml
 cloudCarbonFootprint:
   gcp:
