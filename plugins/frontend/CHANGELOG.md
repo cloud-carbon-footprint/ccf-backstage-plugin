@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-frontend
 
+## 0.0.2
+
+### Patch Changes
+
+- be6f7d6: update dependencies and readmes
+
 ## 0.0.1
 
 ### Patch Changes
