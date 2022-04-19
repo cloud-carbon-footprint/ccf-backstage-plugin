@@ -67,7 +67,7 @@ export const PluginTabs = ({
 }) => {
   const config = useApi(configApiRef);
   const clientConfig = useMemo(
-    () => config.getOptionalConfig('client'),
+    () => config.getOptionalConfig('cloudCarbonFootprint.client'),
     [config],
   );
   const groupBy = useMemo(() => config.getOptionalString('groupBy'), [config]);
