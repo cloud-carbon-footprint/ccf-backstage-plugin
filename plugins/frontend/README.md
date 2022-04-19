@@ -11,3 +11,6 @@ cloudCarbonFootprint:
     groupBy: week
 ```
 
+---
+
+© 2022 Thoughtworks, Inc.

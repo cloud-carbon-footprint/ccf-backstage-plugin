@@ -64,3 +64,7 @@ cloudCarbonFootprint:
     clientSecret: shhh,
     tenantId: tenant id,
 ```
+
+---
+
+© 2022 Thoughtworks, Inc.

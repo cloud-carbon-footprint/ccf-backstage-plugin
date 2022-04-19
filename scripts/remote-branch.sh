@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# © 2021 Thoughtworks, Inc.
+# © 2022 Thoughtworks, Inc.
 #
 new_remote=$1
 new_branch=$2

@@ -24,3 +24,5 @@ Add any other context or screenshots about the feature request here.
 
 ## Possible Implementation
 <!--- Not obligatory, but ideas as to the implementation of the addition or change -->
+
+© 2022 Thoughtworks, Inc.

@@ -1,3 +1,7 @@
+/*
+ * © 2022 Thoughtworks, Inc.
+ */
+
 {
   "extends": "@backstage/cli/config/tsconfig.json",
   "include": [

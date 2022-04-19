@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /* eslint-disable import/no-extraneous-dependencies */
 
+/*
+ * © 2022 Thoughtworks, Inc.
+ */
+
 const { Octokit } = require('@octokit/rest')
 
 // See Examples above to learn about these command line arguments.

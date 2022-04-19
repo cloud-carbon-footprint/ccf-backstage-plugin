@@ -31,7 +31,7 @@ There are fundamentally three ways an individual can contribute:
 
 To submit a bug report:
 
-When opening a new issue in the `cloud-carbon-footprint/ccf-backstage-plugin` issue tracker, users will be presented with a [bug report template](/.git/ISSUE_TEMPLATE/Bug_report.md) that should be filled in.
+When opening a new issue in the `cloud-carbon-footprint/ccf-backstage-plugin` issue tracker, users will be presented with a [bug report template](https://github.com/cloud-carbon-footprint/ccf-backstage-plugin/blob/trunk/.github/ISSUE_TEMPLATE/BUG_REPORT.md) that should be filled in.
 
 If you believe that you have found a bug in the plugin, please fill out the given template to the best of your ability.
 
@@ -66,10 +66,6 @@ $ git remote add upstream https://github.com/cloud-carbon-footprint/ccf-backstag
 $ git fetch upstream
 ```
 
-### Build
-
-See the [main repository README](https://github.com/cloud-carbon-footprint/ccf-backstage-plugin/blob/trunk/README.md) for build directions.
-
 ### Branch
 
 The Thoughtworks Cloud Carbon Footprint team uses [Trunk-Based Development](https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines).
@@ -86,7 +82,7 @@ $ git push origin/trunk
 If you are a core contributor, you may want to fetch changes from a forked repository. To make that easier, we have a script that will add the new remote and checkout the fork's branch. It can be invoked with:
 
 ```
-$ ./scripts/remote_branch.sh remote-name remote-branch-name
+$ ./scripts/remote-branch.sh remote-name remote-branch-name
 ```
 
 ### Code
@@ -105,6 +101,7 @@ Most pull requests opened against the `cloud-carbon-footprint/ccf-backstage-plug
 - Following the above rules is a pre-requisite for committing any code.
 
 #### Testing
+
 We strongly encourage you to cover any code added with the appropriate tests.
 
 ##### Unit Testing
@@ -243,4 +240,4 @@ has been caused by either out of date credentials on GCP, or the GCP credentials
 
 ---
 
-© 2021 Thoughtworks, Inc.
+© 2022 Thoughtworks, Inc.
