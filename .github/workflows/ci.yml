@@ -82,8 +82,8 @@ jobs:
           yarn build
       - uses: actions/upload-artifact@v2
         with:
-          name: dist-workspace
-          path: dist-workspace.zip
+          name: dist-types
+          path: dist-types
   release:
     needs: build
     runs-on: ubuntu-latest

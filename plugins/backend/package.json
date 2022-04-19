@@ -9,6 +9,17 @@
     "url": "github:cloud-carbon-footprint/ccf-backstage-plugin",
     "directory": "plugins/backend"
   },
+  "description": "The Backstage back-end plugin for Cloud Carbon Footprint.",
+  "homepage": "https://www.cloudcarbonfootprint.org/",
+  "keywords": [
+    "thoughtworks",
+    "cloud",
+    "sustainability",
+    "climate",
+    "carbon-emissions",
+    "carbon-footprint",
+    "backstage"
+  ],
   "publishConfig": {
     "access": "public",
     "main": "dist/index.cjs.js",

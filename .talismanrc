@@ -1,6 +1,8 @@
 fileignoreconfig:
 - filename: .github/workflows/ci.yml
   checksum: bbb03a42d814b0e1060ec3a64976f670cd9768054a49f28bb54f479fa181adc9
+- filename: CONTRIBUTING.md
+  checksum: 8cf95b52dea8ce6deb4f1850cb92f197c30fbc79db5405072584466a6bdc5cc3
 - filename: plugins/backend/config.d.ts
   checksum: 5ba89326cc70100f829d48437c8c02ce1e30d809f0c8016465ec4f741554c37d
 - filename: yarn.lock

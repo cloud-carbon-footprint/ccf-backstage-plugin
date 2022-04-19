@@ -113,3 +113,18 @@ cloudCarbonFootprint:
 
 Once the backend plugin is configured, usage data for the given cloud providers will be displayed in the UI.
 
+## Join Us!
+
+To begin as a contributor, please see the [contributing page](CONTRIBUTING.md).
+Please read through our [code of conduct](CODE_OF_CONDUCT.md) for our expectations around this community.
+
+⭐️Give us a star if you like the project or find this work interesting!
+
+
+### Don’t be shy!
+Reach out with any questions, support requests, and further discussions in our **[discussion google group](https://groups.google.com/g/cloud-carbon-footprint)**.
+
+
+## License
+
+Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
