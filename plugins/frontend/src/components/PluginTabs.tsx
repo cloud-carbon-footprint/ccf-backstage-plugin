@@ -65,7 +65,7 @@ export const PluginTabs = ({
     () => config.getOptionalConfig('cloudCarbonFootprint.client'),
     [config],
   );
-  const groupBy = useMemo(() => clientConfig.getOptionalString('groupBy'), [clientConfig]);
+  const groupBy = useMemo(() => clientConfig.getOptionalString('groupBy') ?? 'week', [clientConfig]);
   const { endDate, startDate } = useMemo(
     () => determineDates(clientConfig),
     [clientConfig],
