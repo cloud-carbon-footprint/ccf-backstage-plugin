@@ -1,5 +1,5 @@
 {
-  "name": "@austin-garrard/backstage-plugin-backend",
+  "name": "@cloud-carbon-footprint/backstage-plugin-backend",
   "version": "0.0.1",
   "main": "src/index.ts",
   "types": "src/index.ts",
