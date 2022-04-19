@@ -36,7 +36,7 @@ import { RecommendationsTab } from './RecommendationTab';
 
 const determineDates = (clientConfig?: Config) => {
   const endDate: moment.Moment = moment.utc();
-  const defaultStartDate: moment.Moment = moment.utc().subtract(1, 'years');
+  const defaultStartDate: moment.Moment = moment.utc().subtract(1, 'months');
 
   const previousYearOfUsage = clientConfig?.getOptionalBoolean(
     'previousYearOfUsage',
@@ -70,7 +70,7 @@ export const PluginTabs = ({
     () => config.getOptionalConfig('cloudCarbonFootprint.client'),
     [config],
   );
-  const groupBy = useMemo(() => config.getOptionalString('groupBy'), [config]);
+  const groupBy = useMemo(() => clientConfig.getOptionalString('groupBy'), [clientConfig]);
   const { endDate, startDate } = useMemo(
     () => determineDates(clientConfig),
     [clientConfig],
