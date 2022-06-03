@@ -28,7 +28,7 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
       : {
           ...ccfDefaults.GCP,
           USE_BILLING_DATA:
-            gcpConfig.getOptionalBoolean('useBillingData') === 'true' ? true : false  ??
+            gcpConfig.getOptionalString('useBillingData') === 'true' ? true : false  ??
             ccfDefaults.GCP!.USE_BILLING_DATA,
           BILLING_PROJECT_ID:
             gcpConfig.getOptionalString('billingProjectId') ??
@@ -61,7 +61,7 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
         : {
             ...ccfDefaults.AWS,
             USE_BILLING_DATA:
-              awsConfig.getOptionalBoolean('useBillingData') === 'true' ? true : false  ??
+              awsConfig.getOptionalString('useBillingData') === 'true' ? true : false  ??
               ccfDefaults.AWS!.USE_BILLING_DATA,
             BILLING_ACCOUNT_ID:
               awsConfig.getOptionalString('billingAccountId') ??
@@ -116,7 +116,7 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
         : {
             ...ccfDefaults.AZURE,
             USE_BILLING_DATA:
-              azureConfig.getOptionalBoolean('useBillingData') === 'true' ? true : false ??
+              azureConfig.getOptionalString('useBillingData') === 'true' ? true : false ??
               ccfDefaults.AZURE!.USE_BILLING_DATA,
             authentication: {
               mode:
