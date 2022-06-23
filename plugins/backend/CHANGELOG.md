@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-backend
 
+## 0.0.4
+
+### Patch Changes
+
+- 450c6c0: updates ccf api and common packages deps
+
 ## 0.0.3
 
 ### Patch Changes
