@@ -1904,30 +1904,31 @@
     human-id "^1.0.2"
     prettier "^1.19.1"
 
-"@cloud-carbon-footprint/api@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/api/-/api-1.4.1.tgz#368cf9e17986a8508fc38f684733faf885c5bb25"
-  integrity sha512-bR+mAr9qanbJRBG3EtNNbA/TocfkgEklywJjs+ArGwat7KgooeXP2sMzgoGdfYURPVLE/agLBye6/3OknMGDzA==
+"@cloud-carbon-footprint/api@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/api/-/api-1.4.2.tgz#71ac4e41e6072e33becbcee75761675d60db7a69"
+  integrity sha512-bNLTVjB2JWnRQubkA6qFQT9jj09kA/IjIS/Aqz/hCubfldJN/YRVd0EKO76Kwp8smRBAUoLxQrPlCLWTlpF2Gw==
   dependencies:
-    "@cloud-carbon-footprint/app" "^0.5.1"
+    "@cloud-carbon-footprint/app" "^0.6.0"
     "@cloud-carbon-footprint/common" "^1.5.1"
     "@types/express" "^4.17.12"
     express "^4.17.1"
     helmet "^5.0.1"
     module-alias "^2.2.2"
 
-"@cloud-carbon-footprint/app@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/app/-/app-0.5.1.tgz#044cbbd7fc508ea897fd9c43fdb5e7260c0ca935"
-  integrity sha512-a0CRSlM8UyCnWbYaWwpT/71OYwgL3dwQEKqPMavgLUqO2YsjAgeWnt4dDPCedsd/FIxl3bIMqqMVBuI9ENtWaA==
+"@cloud-carbon-footprint/app@^0.6.0":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/app/-/app-0.6.1.tgz#2d6cca851f151316073d1d1ec3212ad6cbf7d409"
+  integrity sha512-g3rjyuRm1ydDEJL/nqN6TL2Ilv0ZMjSbJruaAJs88i47tWUmCnwC/CCSIZng+KMFhtkJRxKdnrTWk7VGtOxyGg==
   dependencies:
     "@cloud-carbon-footprint/aws" "^0.11.0"
-    "@cloud-carbon-footprint/azure" "^0.9.1"
-    "@cloud-carbon-footprint/common" "^1.5.1"
+    "@cloud-carbon-footprint/azure" "^0.10.1"
+    "@cloud-carbon-footprint/common" "^1.6.0"
     "@cloud-carbon-footprint/gcp" "^0.9.1"
-    "@cloud-carbon-footprint/on-premise" "^0.0.2"
+    "@cloud-carbon-footprint/on-premise" "^0.1.0"
     "@google-cloud/monitoring" "^2.3.5"
     "@google-cloud/storage" "^5.16.1"
+    "@sovpro/delimited-stream" "^1.1.0"
     moment "^2.29.1"
     ramda "^0.28.0"
 
@@ -1945,17 +1946,17 @@
     moment "^2.29.1"
     ramda "^0.28.0"
 
-"@cloud-carbon-footprint/azure@^0.9.1":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/azure/-/azure-0.9.2.tgz#34f752db5fde3c4ee4e24a06830e1a1cb79ace78"
-  integrity sha512-RDX4s3RSNjTGaappXU/NMtCJ9l4bzKGcsQKKd9BwFSUpWwADg7aqEMrOoAnS/Q57TXqZxb/HTWrVoeeetZ13uA==
+"@cloud-carbon-footprint/azure@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/azure/-/azure-0.10.1.tgz#80ec6311c5a0fb1bf1e318d29353f0db3b0d6659"
+  integrity sha512-GEWPzreY9dd6coe9EWF3g/IOPlmtd7/C0TBClKdrViN4u/dYfFaP/n5zS2j3mKYxxevxSmzJI7daay9kI37HBQ==
   dependencies:
     "@azure/arm-consumption" "^8.0.0"
     "@azure/arm-resources-subscriptions" "^2.0.0"
     "@azure/identity" "^2.0.1"
     "@azure/ms-rest-js" "^2.2.3"
     "@azure/ms-rest-nodeauth" "^3.0.7"
-    "@cloud-carbon-footprint/common" "^1.5.1"
+    "@cloud-carbon-footprint/common" "^1.6.0"
     "@cloud-carbon-footprint/core" "^0.16.1"
     "@google-cloud/secret-manager" "^3.10.1"
     moment "^2.29.1"
@@ -2002,6 +2003,16 @@
     moment "^2.29.1"
     winston "^3.3.3"
 
+"@cloud-carbon-footprint/common@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/common/-/common-1.6.0.tgz#d1c54fa9134c0d650d56bcd4041e75515ed8a449"
+  integrity sha512-DYhbFi3YjfDnGWZh1FEr33wvuWL2XPwyhYA8eiDxDQtg4YSENjCVFjc7O3aTmau3YZlZgdGTgi5ABH8Z9liAlw==
+  dependencies:
+    "@google-cloud/logging-winston" "^4.1.1"
+    dotenv "^16.0.0"
+    moment "^2.29.1"
+    winston "^3.3.3"
+
 "@cloud-carbon-footprint/core@^0.16.1":
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/core/-/core-0.16.1.tgz#79fb27502c0d46b6a01f12ddbca975eaf63450da"
@@ -2028,12 +2039,12 @@
     googleapis "^96.0.0"
     moment "^2.29.1"
 
-"@cloud-carbon-footprint/on-premise@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/on-premise/-/on-premise-0.0.2.tgz#df44a264f6ff7d80f5a3bfe340cf2bdc01eee350"
-  integrity sha512-Ah3cBMSf13WiWgztK4hvBXq8I3Q9rWKqpWaQVWaULF3RDxi5CpMBZmi5U7EXprNTlYJ01zCpgbLi0OzFYB9DhA==
+"@cloud-carbon-footprint/on-premise@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/on-premise/-/on-premise-0.1.0.tgz#5f4fe274b052b770e34af174fa2cec93e80a2cf5"
+  integrity sha512-v7uaCQNf4/cUofN1pz3xcQs/CdEPtjJKaKnPgmkn5tOIUxKWQ26kjXH7npb9mW2/Sal1vFLoh8SzIw+KYI+jLQ==
   dependencies:
-    "@cloud-carbon-footprint/common" "^1.5.1"
+    "@cloud-carbon-footprint/common" "^1.6.0"
     "@cloud-carbon-footprint/core" "^0.16.1"
     moment "^2.29.1"
 
@@ -4293,6 +4304,11 @@
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz#8da5c6530915653f3a1f38fd5f101d8c3f8079c5"
   integrity sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
+
+"@sovpro/delimited-stream@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@sovpro/delimited-stream/-/delimited-stream-1.1.0.tgz#4334bba7ee241036e580fdd99c019377630d26b4"
+  integrity sha512-kQpk267uxB19X3X2T1mvNMjyvIEonpNSHrMlK5ZaBU6aZxw7wPbpgKJOjHN3+/GPVpXgAV9soVT2oyHpLkLtyw==
 
 "@spotify/eslint-config-base@^12.0.0":
   version "12.0.0"
