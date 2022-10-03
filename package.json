@@ -9,7 +9,7 @@
     "build": "lerna run build",
     "lint": "lerna run lint",
     "tsc": "tsc",
-    "tsc:full": "backstage-cli clean && tsc --skipLibCheck false --incremental false",
+    "tsc:full": "backstage-cli repo clean && tsc --skipLibCheck false --incremental false",
     "release": "changeset version && yarn install",
     "version": "yarn changeset version && yarn install --no-immutable"
   },
