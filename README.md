@@ -87,7 +87,7 @@ Add the plugin to `packages/backend/src/index.ts`:
 import ccf from './plugins/ccf';
 ...
 
-async funtion main() {
+async function main() {
   ...
   // add env
   const ccfEnv = useHotMemoize(module, () =>
