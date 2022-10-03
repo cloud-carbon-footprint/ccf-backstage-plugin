@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-frontend
 
+## 0.0.4
+
+### Patch Changes
+
+- 76e8d2d: Updates ccf packages
+
 ## 0.0.3
 
 ### Patch Changes
