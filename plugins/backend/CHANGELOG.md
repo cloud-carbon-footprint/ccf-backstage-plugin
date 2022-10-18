@@ -1,17 +1,5 @@
 # @cloud-carbon-footprint/backstage-plugin-backend
 
-## 0.0.7
-
-### Patch Changes
-
-- 8896219: updates backstage dependencies
-
-## 0.0.6
-
-### Patch Changes
-
-- 232d0e7: updates dependencies
-
 ## 0.0.5
 
 ### Patch Changes
