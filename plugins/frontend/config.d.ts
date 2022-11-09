@@ -26,7 +26,7 @@ export interface Config {
       * Whether to disable the cache and request fresh estimates each time. Defaults to false
       * @visibility frontend
       */
-      disableCache?: boolean
+      disableCache?: boolean;
     };
   }
 }
