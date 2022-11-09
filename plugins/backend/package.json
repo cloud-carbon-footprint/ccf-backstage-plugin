@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@types/supertest": "^2.0.8",
-    "msw": "^0.35.0",
+    "msw": "^0.48.0",
     "supertest": "^4.0.2"
   },
   "files": [
