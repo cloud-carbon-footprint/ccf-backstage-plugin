@@ -21,7 +21,12 @@ export interface Config {
        * @visibility frontend
        */
       groupBy?: 'day' | 'week' | 'month' | 'quarter' | 'year';
-
+      
+      /**
+      * Whether to disable the cache and request fresh estimates each time. Defaults to false
+      * @visibility frontend
+      */
+      disableCache?: boolean
     };
   }
 }
