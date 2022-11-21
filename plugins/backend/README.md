@@ -65,6 +65,21 @@ cloudCarbonFootprint:
     tenantId: tenant id,
 ```
 
+### Caching
+
+See [here](https://www.cloudcarbonfootprint.org/docs/data-persistence-and-caching) for more detailed documentation on data persistence and caching.
+
+To use MongoDB (recommended and supported caching mode), here is an example of the configuration:
+
+```yaml
+# app-config.local.yaml
+cloudCarbonFootprint:
+  optional:
+    cacheMode: MONGODB
+    mongoDbUri: mongodb://localhost:27017
+    mongoDbCredentials: ~/keys/mongodb-certificate.pem
+```
+
 ---
 
 © 2022 Thoughtworks, Inc.

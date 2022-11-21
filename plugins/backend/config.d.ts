@@ -217,15 +217,25 @@ export interface Config {
 
     optional?: {
       /**
-       * Set with 'GCS' to store cache file in Google Cloud Storage or leave it empty to use the default.
+       * Set with 'GCS' or 'MONGODB' to store cache file in Google Cloud Storage or Mongo Database respectively, or leave it empty to use the default.
        * @visibility backend
        */
-      cacheMode?: 'GCP';
+      cacheMode?: 'GCP' | 'MONGODB';
       /**
-       * Is the name of you Google Cloud Storage bucket where the cache file will be stored.
+       * If cacheMode is set to 'GCS', you need to provide a Google Cloud Storage bucket where the cache file will be stored.
        * @visibility backend
        */
       gcsCacheBucketName?: string;
+      /**
+       *  If cacheMode is set to 'MONGODB', you need to provide a URI to your db.
+       * @visibility backend
+       */
+      mongoDbUri?: string;
+      /**
+       * If cacheMode is set to 'MONGODB', you need to provide a file path to your credentials file.
+       * @visibility backend
+       */
+      mongoDbCredentials?: string;
       /**
        * Value to set how the cloud provider queries should return data (e.g. day/week/month/quarter/year). Default to 'day'.
        * @visibility backend
