@@ -19,7 +19,7 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
   const awsConfig = backstageConfig.getOptionalConfig('aws');
   const azureConfig = backstageConfig.getOptionalConfig('azure');
   const onPremiseConfig = backstageConfig.getOptionalConfig('onPremise');
-  const mongoDbConfig = backstageConfig.getOptionalConfig('mongoDb');
+  const mongodbConfig = backstageConfig.getOptionalConfig('mongodb');
   const optionalConfig = backstageConfig.getOptionalConfig('optional');
 
   return {
@@ -165,16 +165,16 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
             },
           },
     MONGODB:
-      mongoDbConfig === undefined
+      mongodbConfig === undefined
           ? ccfDefaults.MONGODB
           : {
               ...ccfDefaults.MONGODB,
               URI:
-                  optionalConfig?.getOptionalString('mongoDbUri') ??
-                  ccfDefaults.MONGODB?.URI,
+                  mongodbConfig?.getOptionalString('mongodbUri') ??
+                  ccfDefaults.MONGODB!.URI,
               CREDENTIALS:
-                  optionalConfig?.getOptionalString('mongoDbCredentials') ??
-                  ccfDefaults.MONGODB?.CREDENTIALS,
+                  mongodbConfig?.getOptionalString('mongodbCredentials') ??
+                  ccfDefaults.MONGODB!.CREDENTIALS,
           },
     CACHE_MODE:
       optionalConfig?.getOptionalString('cacheMode') ?? ccfDefaults.CACHE_MODE,
