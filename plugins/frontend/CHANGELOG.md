@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-frontend
 
+## 0.0.7
+
+### Patch Changes
+
+- 58e0a12: adds mongodb configuration and fixes react-router bug
+
 ## 0.0.6
 
 ### Patch Changes
