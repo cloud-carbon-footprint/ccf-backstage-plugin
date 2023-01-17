@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-frontend
 
+## 0.0.8
+
+### Patch Changes
+
+- efeed47: Bumps Backstage dependencies to latest version, includes react router migration
+
 ## 0.0.7
 
 ### Patch Changes
