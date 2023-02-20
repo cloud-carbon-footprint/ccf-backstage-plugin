@@ -38,7 +38,7 @@
     "clean": "backstage-cli package clean"
   },
   "dependencies": {
-    "@backstage/backend-common": "^0.18.0",
+    "@backstage/backend-common": "^0.18.2",
     "@backstage/config": "^1.0.6",
     "@cloud-carbon-footprint/api": "^1.4.3",
     "@cloud-carbon-footprint/common": "^1.7.0",
