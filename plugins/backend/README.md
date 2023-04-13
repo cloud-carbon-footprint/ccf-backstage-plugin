@@ -76,8 +76,9 @@ To use MongoDB (recommended and supported caching mode), here is an example of t
 cloudCarbonFootprint:
   optional:
     cacheMode: MONGODB
-    mongoDbUri: mongodb://localhost:27017
-    mongoDbCredentials: ~/keys/mongodb-certificate.pem
+  mongodb:
+    mongodbUri: mongodb://localhost:27017
+    mongodbCredentials: ~/keys/mongodb-certificate.pem
 ```
 
 ---
