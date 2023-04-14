@@ -15,8 +15,10 @@ assignees: ''
 
 ### Issue Details
 
-- **Operating System:**
-  - <!-- (Platform and Version) e.g. macOS 10.13.6 / Windows 10 (1803) / Ubuntu 18.04 x64 -->
+- **Backstage Version:**
+  - <!-- We recommend using the latest version -->
+- **CCF Plugin Version:**
+  - <!-- We recommend using the latest version -->
 - **Browser:**
   - <!-- e.g. Chrome / Internet Explorer / Firefox -->
 
