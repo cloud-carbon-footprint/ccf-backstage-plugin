@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-frontend
 
+## 0.1.1
+
+### Patch Changes
+
+- e577e76: updates ts config
+
 ## 0.1.0
 
 ### Minor Changes
