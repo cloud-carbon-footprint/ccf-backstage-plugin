@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-backend
 
+## 0.2.0
+
+### Minor Changes
+
+- 764c9bd: updates config and compatibility with recent ccf updates
+
 ## 0.1.1
 
 ### Patch Changes
