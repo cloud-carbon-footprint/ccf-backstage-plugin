@@ -128,6 +128,18 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
             USE_BILLING_DATA:
               azureConfig.getOptionalBoolean('useBillingData') ??
               ccfDefaults.AZURE!.USE_BILLING_DATA,
+            RESOURCE_TAG_NAMES:
+              azureConfig.getOptional<string[]>('resourceTagNames') ??
+              ccfDefaults.AZURE!.RESOURCE_TAG_NAMES,
+            CONSUMPTION_CHUNKS_DAYS:
+              azureConfig.getOptionalNumber('consumptionChunksDays') ??
+              ccfDefaults.AZURE!.CONSUMPTION_CHUNKS_DAYS,
+            SUBSCRIPTION_CHUNKS:
+              azureConfig.getOptionalNumber('subscriptionChunks') ??
+              ccfDefaults.AZURE!.SUBSCRIPTION_CHUNKS,
+            SUBSCRIPTIONS:
+              azureConfig.getOptional<string[]>('subscriptions') ??
+              ccfDefaults.AZURE!.SUBSCRIPTIONS,
             authentication: {
               mode:
                 azureConfig.getOptionalString('authMode') ??
