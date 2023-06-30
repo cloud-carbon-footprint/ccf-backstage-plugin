@@ -34,6 +34,38 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
+"@apidevtools/json-schema-ref-parser@^9.0.6":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@apidevtools/json-schema-ref-parser/-/json-schema-ref-parser-9.1.2.tgz#8ff5386b365d4c9faa7c8b566ff16a46a577d9b8"
+  integrity sha512-r1w81DpR+KyRWd3f+rk6TNqMgedmAxZP5v5KWlXQWlgMUUtyEJch0DKEci1SorPMiSeM8XPl7MZ3miJ60JIpQg==
+  dependencies:
+    "@jsdevtools/ono" "^7.1.3"
+    "@types/json-schema" "^7.0.6"
+    call-me-maybe "^1.0.1"
+    js-yaml "^4.1.0"
+
+"@apidevtools/openapi-schemas@^2.0.4":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@apidevtools/openapi-schemas/-/openapi-schemas-2.1.0.tgz#9fa08017fb59d80538812f03fc7cac5992caaa17"
+  integrity sha512-Zc1AlqrJlX3SlpupFGpiLi2EbteyP7fXmUOGup6/DnkRgjP9bgMM/ag+n91rsv0U1Gpz0H3VILA/o3bW7Ua6BQ==
+
+"@apidevtools/swagger-methods@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@apidevtools/swagger-methods/-/swagger-methods-3.0.2.tgz#b789a362e055b0340d04712eafe7027ddc1ac267"
+  integrity sha512-QAkD5kK2b1WfjDS/UQn/qQkbwF31uqRjPTrsCs5ZG9BQGAkjwvqGFjjPqAuzac/IYzpPtRzjCP1WrTuAIjMrXg==
+
+"@apidevtools/swagger-parser@10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@apidevtools/swagger-parser/-/swagger-parser-10.0.3.tgz#32057ae99487872c4dd96b314a1ab4b95d89eaf5"
+  integrity sha512-sNiLY51vZOmSPFZA5TF35KZ2HbgYklQnTSDnkghamzLb3EkNtcQnrBQEj5AOCxHpTtXpqMCRM1CrmV2rG6nw4g==
+  dependencies:
+    "@apidevtools/json-schema-ref-parser" "^9.0.6"
+    "@apidevtools/openapi-schemas" "^2.0.4"
+    "@apidevtools/swagger-methods" "^3.0.2"
+    "@jsdevtools/ono" "^7.1.3"
+    call-me-maybe "^1.0.1"
+    z-schema "^5.0.1"
+
 "@aws-crypto/crc32@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@aws-crypto/crc32/-/crc32-3.0.0.tgz#07300eca214409c33e3ff769cd5697b57fdd38fa"
@@ -820,7 +852,7 @@
     "@azure/abort-controller" "^1.0.0"
     tslib "^2.2.0"
 
-"@azure/identity@^3.1.4", "@azure/identity@^3.2.1":
+"@azure/identity@^3.2.1", "@azure/identity@^3.2.2":
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/@azure/identity/-/identity-3.2.3.tgz#dc6a4bc4c798c06dd8a3af2869f83ddadf332e26"
   integrity sha512-knIbl7p2i8r3qPsLW2W84esmDPr36RqieLC72OeuqYk4+0TRNthUhWTs655P9S9Pm3TVVxcFsS3Le9SXIWBIFA==
@@ -2896,28 +2928,30 @@
     human-id "^1.0.2"
     prettier "^2.7.1"
 
-"@cloud-carbon-footprint/api@^1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/api/-/api-1.6.2.tgz#936fd982741a2000455a948fcb999825fd2e9edb"
-  integrity sha512-xS8jWn3hUYWNrnpckeIK+SxLjr1ocwFYYFCIv6wFEGvBwXNXsPLcYr+r+KURZCrNbOXEi+qHCY7RoA871eYycg==
+"@cloud-carbon-footprint/api@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/api/-/api-1.7.0.tgz#90277afedf5e43cb7c7bfc4ab894717bcd71a0cd"
+  integrity sha512-6HTwbD8SQoSytBmJ6OuVs3SmttFCYCZ8DBDIXEnzzAogKen8HQTy2/1JdJ1/zTBmZrI8EjqGQw04zDksU83Q9g==
   dependencies:
-    "@cloud-carbon-footprint/app" "^1.2.1"
-    "@cloud-carbon-footprint/common" "^1.9.0"
+    "@cloud-carbon-footprint/app" "^1.3.0"
+    "@cloud-carbon-footprint/common" "^1.12.0"
     "@types/express" "^4.17.12"
     cors "^2.8.5"
     express "^4.17.1"
     helmet "^5.0.1"
     module-alias "^2.2.2"
+    swagger-jsdoc "^6.2.8"
+    swagger-ui-express "^4.6.2"
 
-"@cloud-carbon-footprint/app@^1.2.1":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/app/-/app-1.2.2.tgz#f802357845087f29fa0dc4ec58a11e98843b9ac8"
-  integrity sha512-5YHpxzWriJu/zCvzuou2+E+bpXYr0cZ+9V+4IfaCWx2zbDoGayFkEk0tedpbAnOVq6bGR2O1aei8ipLxP9eY8Q==
+"@cloud-carbon-footprint/app@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/app/-/app-1.3.0.tgz#48e34017a7b0ad87c4846e823d8d88b1f842c2e1"
+  integrity sha512-N7E01rKDTddL+7OCfvvxVdVjzDawtYf5zn0q5SXmzG3MOeoKAdL6GixWOdcCjN7++48nQjNMunGiRYDFZVRYqQ==
   dependencies:
     "@cloud-carbon-footprint/aws" "^0.14.4"
-    "@cloud-carbon-footprint/azure" "^1.3.0"
-    "@cloud-carbon-footprint/common" "^1.11.0"
-    "@cloud-carbon-footprint/gcp" "^0.13.0"
+    "@cloud-carbon-footprint/azure" "^1.4.0"
+    "@cloud-carbon-footprint/common" "^1.12.0"
+    "@cloud-carbon-footprint/gcp" "^0.13.1"
     "@cloud-carbon-footprint/on-premise" "^0.1.1"
     "@google-cloud/storage" "^5.16.1"
     "@sovpro/delimited-stream" "^1.1.0"
@@ -2939,29 +2973,29 @@
     moment "^2.29.1"
     ramda "^0.29.0"
 
-"@cloud-carbon-footprint/azure@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/azure/-/azure-1.3.0.tgz#aafdf08a8a1002781275ad0124efa48f957f7765"
-  integrity sha512-lTl41YCInBfZIhsJsc7iGhsdzL7xKNmVWiB93iBzXBGdc4/cgFU/tVxSW9g2YK88Ncz4aLY8VBlrmin+XIxb6A==
+"@cloud-carbon-footprint/azure@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/azure/-/azure-1.4.0.tgz#ef8a0ab6844ff9e84cc655df95098c0a5ebdcbbe"
+  integrity sha512-hUJk0xYP/1VjiWxly8GIh83C6ailszFrY9UMWoicAow+1nlXE1ONr0LkLTVrA1UIKvgECGSprrDqVYmF2ZCaGA==
   dependencies:
     "@azure/arm-advisor" "^3.1.0"
     "@azure/arm-consumption" "^9.2.0"
     "@azure/arm-resources-subscriptions" "^2.0.2"
-    "@azure/identity" "^3.1.4"
+    "@azure/identity" "^3.2.2"
     "@azure/ms-rest-js" "^2.6.6"
     "@azure/ms-rest-nodeauth" "^3.1.1"
-    "@cloud-carbon-footprint/common" "^1.10.0"
+    "@cloud-carbon-footprint/common" "^1.12.0"
     "@cloud-carbon-footprint/core" "^0.17.3"
     "@google-cloud/secret-manager" "^3.10.1"
     moment "^2.29.1"
 
-"@cloud-carbon-footprint/client@4.1.2":
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/client/-/client-4.1.2.tgz#18cfa0566f01c88d611273c1fc8d6742ba0d14bf"
-  integrity sha512-PmBeFm8dO3vnKPu0ioz3651UBaWAfzTRIckj1zVMtUmN5FPifveBZ7ez6jnlmKwAWkFwhCXMtwKqjw93UauJTQ==
+"@cloud-carbon-footprint/client@4.1.3":
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/client/-/client-4.1.3.tgz#d0807a5316f03f4523359400f41cd58afa6a5ef9"
+  integrity sha512-AHYTQI5YftXaAzd9ZbtwMyrY4x/q3AU9vTuywb0HxHphQd97VsQrm48LMPX4/3GxtvLOVALBPHVmzA7Pi306EA==
   dependencies:
     "@babel/runtime" "^7.14.0"
-    "@cloud-carbon-footprint/common" "^1.10.0"
+    "@cloud-carbon-footprint/common" "^1.12.0"
     "@emotion/react" "^11.9.0"
     "@emotion/styled" "^11.8.1"
     "@material-ui/core" "^4.11.4"
@@ -2987,10 +3021,10 @@
     ts-node "^10.7.0"
     typescript "^4.6.2"
 
-"@cloud-carbon-footprint/common@^1.10.0", "@cloud-carbon-footprint/common@^1.11.0", "@cloud-carbon-footprint/common@^1.8.0", "@cloud-carbon-footprint/common@^1.9.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/common/-/common-1.11.0.tgz#185cfb7a6315ad38214d6cbf3e4fefad9355b8b1"
-  integrity sha512-tsfaMQ5J88oBDuvQGtRh+Ia40+/sPib0BVBcrcram3JjoIkbHsykCLG37BBLgwwJb9clR11glMilJU7OsdiUjw==
+"@cloud-carbon-footprint/common@^1.10.0", "@cloud-carbon-footprint/common@^1.12.0", "@cloud-carbon-footprint/common@^1.8.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/common/-/common-1.12.0.tgz#dcde65a994cbcf5e09647c71cbadf405750d22bc"
+  integrity sha512-I2DVgerFPaLT5zXWYDnsMcCK9tKou1LbEUJWiyJnIvA/R6hhdpeFvroP4oou0ihjlfrSM+1G1pQfNM2AXalX6A==
   dependencies:
     "@google-cloud/logging-winston" "^4.1.1"
     dotenv "^16.0.0"
@@ -3008,12 +3042,12 @@
     moment "^2.29.1"
     ramda "^0.29.0"
 
-"@cloud-carbon-footprint/gcp@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/gcp/-/gcp-0.13.0.tgz#1808c6970bd7eb6f5cee1f13d92cabcefc87074a"
-  integrity sha512-6o+GMiKnTbJkGLsAYJ7BxqyFlwAEc5JzcJWfQj8ysq4k3i41+In8Nry0XEmURxeMQD6xWHYXaEH4qUwCqkjLjA==
+"@cloud-carbon-footprint/gcp@^0.13.1":
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/@cloud-carbon-footprint/gcp/-/gcp-0.13.1.tgz#ce60a6794cb0bf72c8c9f0b53f43406c48c3ab97"
+  integrity sha512-SyiaSLY7QIxmRI7Rad3gbYfop3iPyHNF083KS7vh7fckGcBfbsULho4iXHjxgD6ZYiGtsWzCOQf3+skFeFNkCA==
   dependencies:
-    "@cloud-carbon-footprint/common" "^1.11.0"
+    "@cloud-carbon-footprint/common" "^1.12.0"
     "@cloud-carbon-footprint/core" "^0.17.3"
     "@google-cloud/bigquery" "^5.9.3"
     "@google-cloud/compute" "^3.9.0"
@@ -4314,6 +4348,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
+
+"@jsdevtools/ono@^7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@jsdevtools/ono/-/ono-7.1.3.tgz#9df03bbd7c696a5c58885c34aa06da41c8543796"
+  integrity sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==
 
 "@jsdoc/salty@^0.2.1":
   version "0.2.5"
@@ -5791,10 +5830,10 @@
   dependencies:
     "@react-hookz/deep-equal" "^1.0.4"
 
-"@remix-run/router@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.7.0.tgz#550a8d5760b78efc5d60f62b5829b0f74c1fde81"
-  integrity sha512-Eu1V3kz3mV0wUpVTiFHuaT8UD1gj/0VnoFHQYX35xlslQUpe8CuYoKFn9d4WZFHm3yDywz6ALZuGdnUPKrNeAw==
+"@remix-run/router@1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.7.1.tgz#fea7ac35ae4014637c130011f59428f618730498"
+  integrity sha512-bgVQM4ZJ2u2CM8k1ey70o1ePFXsEzYVZoWghh6WjM8p59jQ7HxzbHW4SbnWFG7V9ig9chLawQxDTZ3xzOF8MkQ==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -8916,6 +8955,11 @@ call-bind@^1.0.0, call-bind@^1.0.2:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
 
+call-me-maybe@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/call-me-maybe/-/call-me-maybe-1.0.2.tgz#03f964f19522ba643b1b0693acb9152fe2074baa"
+  integrity sha512-HpX65o1Hnr9HH25ojC1YGs7HCQLq0GCOibSaWER0eNpgJ/Z1MZv2mTc7+xh6WOPxbRVcmgbv4hGU+uSQ/2xFZQ==
+
 callsites@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
@@ -9321,6 +9365,16 @@ comma-separated-tokens@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz#4e89c9458acb61bc8fef19f4529973b2392839ee"
   integrity sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==
+
+commander@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.0.tgz#b990bfb8ac030aedc6d11bc04d1488ffef56db75"
+  integrity sha512-zP4jEKbe8SHzKJYQmq8Y9gYjtO/POJLgIdKgV7B9qNmABVFVc+ctqSX6iXh4mCpJfRBOabiZ2YKPg8ciDw6C+Q==
+
+commander@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.1.tgz#881ee46b4f77d1c1dccc5823433aa39b022cbe06"
+  integrity sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==
 
 commander@^2.20.0:
   version "2.20.3"
@@ -10519,17 +10573,17 @@ dockerode@^3.3.1:
     docker-modem "^3.0.0"
     tar-fs "~2.0.1"
 
+doctrine@3.0.0, doctrine@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-3.0.0.tgz#addebead72a6574db783639dc87a121773973961"
+  integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
+  dependencies:
+    esutils "^2.0.2"
+
 doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
   integrity sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==
-  dependencies:
-    esutils "^2.0.2"
-
-doctrine@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-3.0.0.tgz#addebead72a6574db783639dc87a121773973961"
-  integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
 
@@ -15205,6 +15259,11 @@ lodash.isarguments@^3.1.0:
   resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
   integrity sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
+
 lodash.ismatch@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.ismatch/-/lodash.ismatch-4.4.0.tgz#756cb5150ca3ba6f11085a78849645f188f85f37"
@@ -15229,6 +15288,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash.mergewith@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -18729,19 +18793,19 @@ react-refresh@^0.14.0:
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
 react-router-dom@^6.6.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.14.0.tgz#7ce6c3f73549e4d40216ba150253d3bf30812b33"
-  integrity sha512-YEwlApKwzMMMbGbhh+Q7MsloTldcwMgHxUY/1g0uA62+B1hZo2jsybCWIDCL8zvIDB1FA0pBKY9chHbZHt+2dQ==
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.14.1.tgz#0ad7ba7abdf75baa61169d49f096f0494907a36f"
+  integrity sha512-ssF6M5UkQjHK70fgukCJyjlda0Dgono2QGwqGvuk7D+EDGHdacEN3Yke2LTMjkrpHuFwBfDFsEjGVXBDmL+bWw==
   dependencies:
-    "@remix-run/router" "1.7.0"
-    react-router "6.14.0"
+    "@remix-run/router" "1.7.1"
+    react-router "6.14.1"
 
-react-router@6.14.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.14.0.tgz#1c3e8e922d934d43a253fd862c72c82167c0a7f1"
-  integrity sha512-OD+vkrcGbvlwkspUFDgMzsu1RXwdjNh83YgG/28lBnDzgslhCgxIqoExLlxsfTpIygp7fc+Hd3esloNwzkm2xA==
+react-router@6.14.1:
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.14.1.tgz#5e82bcdabf21add859dc04b1859f91066b3a5810"
+  integrity sha512-U4PfgvG55LdvbQjg5Y9QRWyVxIdO1LlpYT7x+tMAxd9/vmiPuJhIwdxZuIQLN/9e3O4KFDHYfR9gzGeYMasW8g==
   dependencies:
-    "@remix-run/router" "1.7.0"
+    "@remix-run/router" "1.7.1"
 
 react-scripts@^5.0.0:
   version "5.0.1"
@@ -20776,6 +20840,37 @@ svgo@^2.7.0, svgo@^2.8.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
+swagger-jsdoc@^6.2.8:
+  version "6.2.8"
+  resolved "https://registry.yarnpkg.com/swagger-jsdoc/-/swagger-jsdoc-6.2.8.tgz#6d33d9fb07ff4a7c1564379c52c08989ec7d0256"
+  integrity sha512-VPvil1+JRpmJ55CgAtn8DIcpBs0bL5L3q5bVQvF4tAW/k/9JYSj7dCpaYCAv5rufe0vcCbBRQXGvzpkWjvLklQ==
+  dependencies:
+    commander "6.2.0"
+    doctrine "3.0.0"
+    glob "7.1.6"
+    lodash.mergewith "^4.6.2"
+    swagger-parser "^10.0.3"
+    yaml "2.0.0-1"
+
+swagger-parser@^10.0.3:
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/swagger-parser/-/swagger-parser-10.0.3.tgz#04cb01c18c3ac192b41161c77f81e79309135d03"
+  integrity sha512-nF7oMeL4KypldrQhac8RyHerJeGPD1p2xDh900GPvc+Nk7nWP6jX2FcC7WmkinMoAmoO774+AFXcWsW8gMWEIg==
+  dependencies:
+    "@apidevtools/swagger-parser" "10.0.3"
+
+swagger-ui-dist@>=4.11.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-5.1.0.tgz#b01b3be06bebb2566b2df586c1632d502ec792ad"
+  integrity sha512-c1KmAjuVODxw+vwkNLALQZrgdlBAuBbr2xSPfYrJgseEi7gFKcTvShysPmyuDI4kcUa1+5rFpjWvXdusKY74mg==
+
+swagger-ui-express@^4.6.2:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.6.3.tgz#870d0892654fe80e6970a2d680e22521acd2dc19"
+  integrity sha512-CDje4PndhTD2HkgyKH3pab+LKspDeB/NhPN2OF1j+piYIamQqBYwAXWESOT1Yju2xFg51bRW9sUng2WxDjzArw==
+  dependencies:
+    swagger-ui-dist ">=4.11.0"
+
 swc-loader@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/swc-loader/-/swc-loader-0.2.3.tgz#6792f1c2e4c9ae9bf9b933b3e010210e270c186d"
@@ -21823,6 +21918,11 @@ validate.io-number@^1.0.3:
   resolved "https://registry.yarnpkg.com/validate.io-number/-/validate.io-number-1.0.3.tgz#f63ffeda248bf28a67a8d48e0e3b461a1665baf8"
   integrity sha512-kRAyotcbNaSYoDnXvb4MHg/0a1egJdLwS6oJ38TJY7aw9n93Fl/3blIXdyYvPOp55CNxywooG/3BcrwNrBpcSg==
 
+validator@^13.7.0:
+  version "13.9.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.9.0.tgz#33e7b85b604f3bbce9bb1a05d5c3e22e1c2ff855"
+  integrity sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==
+
 vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -22561,6 +22661,11 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
+yaml@2.0.0-1:
+  version "2.0.0-1"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.0.0-1.tgz#8c3029b3ee2028306d5bcf396980623115ff8d18"
+  integrity sha512-W7h5dEhywMKenDJh2iX/LABkbFnBxasD27oyXWDS/feDsxiw0dD5ncXdYXgkvAsXIY2MpW/ZKkr9IU30DBdMNQ==
+
 yaml@^1.10.0, yaml@^1.10.2, yaml@^1.7.2:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
@@ -22680,6 +22785,17 @@ yup@^0.32.9:
     nanoclone "^0.2.1"
     property-expr "^2.0.4"
     toposort "^2.0.2"
+
+z-schema@^5.0.1:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/z-schema/-/z-schema-5.0.6.tgz#46d6a687b15e4a4369e18d6cb1c7b8618fc256c5"
+  integrity sha512-+XR1GhnWklYdfr8YaZv/iu+vY+ux7V5DS5zH1DQf6bO5ufrt/5cgNhVO5qyhsjFXvsqQb/f08DWE9b6uPscyAg==
+  dependencies:
+    lodash.get "^4.4.2"
+    lodash.isequal "^4.5.0"
+    validator "^13.7.0"
+  optionalDependencies:
+    commander "^10.0.0"
 
 zen-observable@^0.10.0:
   version "0.10.0"
