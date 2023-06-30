@@ -28,6 +28,9 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
       ? ccfDefaults.GCP
       : {
           ...ccfDefaults.GCP,
+          INCLUDE_ESTIMATES:
+            gcpConfig.getOptionalBoolean('includeEstimates') ??
+            ccfDefaults.GCP!.INCLUDE_ESTIMATES,
           USE_BILLING_DATA:
             gcpConfig.getOptionalBoolean('useBillingData') ??
             ccfDefaults.GCP!.USE_BILLING_DATA,
@@ -61,6 +64,9 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
         ? ccfDefaults.AWS
         : {
             ...ccfDefaults.AWS,
+            INCLUDE_ESTIMATES:
+              awsConfig.getOptionalBoolean('includeEstimates') ??
+              ccfDefaults.AWS!.INCLUDE_ESTIMATES,
             USE_BILLING_DATA:
               awsConfig.getOptionalBoolean('useBillingData') ??
               ccfDefaults.AWS!.USE_BILLING_DATA,
@@ -116,6 +122,9 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
         ? ccfDefaults.AZURE
         : {
             ...ccfDefaults.AZURE,
+            INCLUDE_ESTIMATES:
+              azureConfig.getOptionalBoolean('includeEstimates') ??
+              ccfDefaults.AZURE!.INCLUDE_ESTIMATES,
             USE_BILLING_DATA:
               azureConfig.getOptionalBoolean('useBillingData') ??
               ccfDefaults.AZURE!.USE_BILLING_DATA,

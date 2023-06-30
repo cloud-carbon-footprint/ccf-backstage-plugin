@@ -38,10 +38,10 @@
     "clean": "backstage-cli package clean"
   },
   "dependencies": {
-    "@backstage/backend-common": "^0.18.2",
-    "@backstage/config": "^1.0.6",
-    "@cloud-carbon-footprint/api": "^1.4.3",
-    "@cloud-carbon-footprint/common": "^1.7.0",
+    "@backstage/backend-common": "^0.19.0",
+    "@backstage/config": "^1.0.8",
+    "@cloud-carbon-footprint/api": "^1.6.2",
+    "@cloud-carbon-footprint/common": "^1.11.0",
     "@types/express": "*",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",

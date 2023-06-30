@@ -54,14 +54,18 @@ export const PluginTabs = ({
     [config],
   );
   const groupBy = useMemo(() => clientConfig?.getOptionalString('groupBy') ?? 'week', [clientConfig]);
+  const pageLimit = useMemo(() => clientConfig?.getOptionalString('pageLimit') ?? '1000', [clientConfig]);
+  const disableCache = useMemo(() => clientConfig?.getOptionalString('disableCache') ?? 'false', [clientConfig]);
   const { endDate, startDate } = useMemo(
     () => determineDates(clientConfig),
     [clientConfig],
   );
+
   const [baseUrl, setUrl] = useState<string>('');
   const discovery: DiscoveryApi = useApi(discoveryApiRef);
-  const footprint = useFootprintData({ baseUrl, startDate, endDate, groupBy });
-  const recommendations = useRecommendationData({ baseUrl, groupBy });
+  const footprint = useFootprintData({ baseUrl, startDate, endDate, groupBy, limit: parseInt(pageLimit as unknown as string, 10),
+    ignoreCache: disableCache as unknown as boolean, });
+  const recommendations = useRecommendationData({ baseUrl, groupBy, footprint });
 
   useEffect(() => {
     discovery.getBaseUrl('cloud-carbon-footprint').then(url => setUrl(url));
@@ -81,7 +85,7 @@ export const PluginTabs = ({
         <EmissionsTab footprint={footprint} baseUrl={baseUrl} />
       </TabbedLayout.Route>
       <TabbedLayout.Route path="/recommendations" title="Recommendations">
-        <RecommendationsTab recommendations={recommendations} />
+        <RecommendationsTab recommendations={recommendations} footprint={footprint} groupBy={groupBy} />
       </TabbedLayout.Route>
       <TabbedLayout.Route path="/carbon-map" title="Carbon Intensity Map">
         <Grid container spacing={3} direction="column">

@@ -6,5 +6,5 @@ fileignoreconfig:
 - filename: plugins/backend/config.d.ts
   checksum: 5ba89326cc70100f829d48437c8c02ce1e30d809f0c8016465ec4f741554c37d
 - filename: yarn.lock
-  checksum: fdf1b14d2e3fba5848e5c918814cf0ce3cf2b21cf213a05f630ac59d28336f0f
+  checksum: c82762b0d41c71650c99cb82d5e981b92b63f73c95ac3c93ecea47eea5127518
 version: "1.0"
