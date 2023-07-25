@@ -7,7 +7,9 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
+    "build:test-plugin": "./scripts/build-local-packages.sh",
     "lint": "lerna run lint",
+    "clean": "lerna run clean",
     "tsc": "tsc",
     "tsc:full": "backstage-cli repo clean && tsc --skipLibCheck false --incremental false",
     "release": "changeset version && yarn install",
