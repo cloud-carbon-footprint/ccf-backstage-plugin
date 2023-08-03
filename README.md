@@ -46,6 +46,18 @@ const routes = (
 )
 ```
 
+In the recent v4 release of `@cloud-carbon-footprint/client` package, we introduced React 18. Until [official support for React 18]([url](https://github.com/backstage/backstage/milestone/41)) is added to Backstage, there is a low-lift solution to help solve [this issue]([url](https://github.com/cloud-carbon-footprint/ccf-backstage-plugin/issues/75)):
+
+In the root `package.json` of your new Backstage application, you will need to add the following to the resolutions object and do a fresh `yarn install`:
+
+```diff
+  "resolutions": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
++   "react": "^17",
+    }
+```
+
 Optionally, add config to `app-config.local.yaml`. See the [client config schema](./plugins/frontend/config.d.ts) for more details. Note that long date ranges and/or granular groupings can result in long load times. The default values are:
 ```yaml
 cloudCarbonFootprint:
