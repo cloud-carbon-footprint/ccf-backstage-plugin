@@ -56,8 +56,11 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
             gcpConfig.getOptionalNumber('vcpusPerCloudComposerEnvironment') ??
             ccfDefaults.GCP!.VCPUS_PER_CLOUD_COMPOSER_ENVIRONMENT,
           CACHE_BUCKET_NAME:
-            optionalConfig?.getOptionalString('gcsCacheBucketName') ??
+            gcpConfig?.getOptionalString('gcsCacheBucketName') ??
             ccfDefaults.GCP!.CACHE_BUCKET_NAME,
+          RESOURCE_TAG_NAMES:
+            gcpConfig.getOptional<string[]>('resourceTagNames') ??
+            ccfDefaults.GCP!.RESOURCE_TAG_NAMES,
         },
     AWS:
       awsConfig === undefined
@@ -116,6 +119,12 @@ export const convertConfig = (appConfig?: BackstageConfig): CCFConfig => {
             COMPUTE_OPTIMIZER_BUCKET:
               awsConfig.getOptionalString('computeOptimizerBucket') ??
               ccfDefaults.AWS!.COMPUTE_OPTIMIZER_BUCKET,
+            IS_AWS_GLOBAL:
+              awsConfig.getOptionalBoolean('isAwsGlobal') ??
+              ccfDefaults.AWS!.IS_AWS_GLOBAL,
+            RESOURCE_TAG_NAMES:
+              awsConfig.getOptional<string[]>('resourceTagNames') ??
+              ccfDefaults.AWS!.RESOURCE_TAG_NAMES,
           },
     AZURE:
       azureConfig === undefined
