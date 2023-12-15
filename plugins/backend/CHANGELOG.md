@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/backstage-plugin-backend
 
+## 0.3.0
+
+### Minor Changes
+
+- bccfb57: adds additional configuration options
+
 ## 0.2.1
 
 ### Patch Changes
